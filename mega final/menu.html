@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylehome.css')}}">
+    <link rel="stylesheet" href="../../stylehome.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="/">Menu</a> <a href="/login">Login</a>
+    </header>
+    <main>
+    <div class="wraper">
+    <img class="product_image" src="{{ image }}" alt=""/>
+    <H3 class="writ">{{ title }}</H3>
+    <p class="writter">{{ description }}</p>
+    <h3 class="costy">{{ cost }}</h3>
+    </div>
+    </main>
+</body>
+</html>

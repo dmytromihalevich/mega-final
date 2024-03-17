@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='stylehome.css')}}">
+    <link rel="stylesheet" href="../../stylehome.css">
+</head>
+<body>
+    <header>
+        <a href="/">Menu</a> <a href="/login">Login</a>
+    </header>
+    <main>
+        <section>
+            <h2 class="pizza">Pizza</h2>
+            <div class="articles">
+            
+                {% for item in data %}
+                    <a class="article" href="/menu/{{item[0]}}">
+                        <img src="{{item[3]}}" alt="">
+                        <h3>{{item[1]}}</h3>
+                        <p>{{item[2]}} </p>
+                        <h2>{{item[4]}} </h2>
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+        
+    </main>
+    
+    
+   
+</body>
+</html>
